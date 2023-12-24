@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/custom_theme.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.darkMode {
+    @include angular-material-theme($brand-dark-theme);
+}
+
+.lightMode {
+    @include angular-material-theme($brand-light-theme);
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #424242;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #303030;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-ripple .mat-ripple-element {
+    background-color: #303030;
+}
